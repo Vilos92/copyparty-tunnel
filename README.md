@@ -2,6 +2,8 @@
 
 This repository provides a `Dockerfile` to run a `copyparty` fileserver. It is designed to be securely exposed to the internet using a Cloudflare Tunnel, which is managed within the container.
 
+View the Docker Hub repository for this image: [greglinscheid/copyparty-tunnel](https://hub.docker.com/r/greglinscheid/copyparty-tunnel)
+
 ---
 
 ## Prerequisites
@@ -65,9 +67,15 @@ Using the same port number for all three (like `3923` in the examples) is highly
 
 ## How to Use
 
-### 1. Build the Docker Image
+### 1. Pull or Build the Docker Image
 
-Navigate to the directory containing the `Dockerfile` and run the following command to build the image.
+You can pull this docker image from Docker Hub.
+
+```bash
+docker pull greglinscheid/copyparty-tunnel:latest
+```
+
+If you would prefer to build it yourself, navigate to the directory containing the `Dockerfile` and run the following command to build the image.
 
 ```bash
 docker build -t greglinscheid/copyparty-tunnel:latest .
