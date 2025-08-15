@@ -1,4 +1,4 @@
-# Copyparty Server with Cloudflared Tunnel 🚀
+# [copyparty](https://github.com/9001/copyparty) Server with Cloudflared Tunnel 🚀
 
 This repository provides a `Dockerfile` to run a `copyparty` fileserver. It is designed to be securely exposed to the internet using a Cloudflare Tunnel, which is managed within the container.
 
