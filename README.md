@@ -2,7 +2,7 @@
 
 This repository provides a `Dockerfile` to run a `copyparty` fileserver. It is designed to be securely exposed to the internet using a Cloudflare Tunnel, which is managed within the container.
 
-View the Docker Hub repository for this image: [greglinscheid/copyparty-tunnel](https://hub.docker.com/r/greglinscheid/copyparty-tunnel)
+View the GitHub Container Registry package for this image: **[ghcr.io/vilos92/copyparty-tunnel](https://github.com/Vilos92/copyparty-tunnel/pkgs/container/copyparty-tunnel)**
 
 ---
 
@@ -69,16 +69,16 @@ Using the same port number for all three (like `3923` in the examples) is highly
 
 ### 1. Pull or Build the Docker Image
 
-You can pull this docker image from Docker Hub.
+You can pull the Docker image from the GitHub Container Registry (GHCR).
 
 ```bash
-docker pull greglinscheid/copyparty-tunnel:latest
+docker pull ghcr.io/vilos92/copyparty-tunnel:latest
 ```
 
 If you would prefer to build it yourself, navigate to the directory containing the `Dockerfile` and run the following command to build the image.
 
 ```bash
-docker build -t greglinscheid/copyparty-tunnel:latest .
+docker build -t ghcr.io/vilos92/copyparty-tunnel:latest .
 ```
 
 ### 2. Run the Docker Container
@@ -100,7 +100,7 @@ docker run -d \
   -v "/path/on/your/computer/to/documents:/data/docs" \
   \
   # Pass in the Cloudflare token (required)
-  -e COPYPARTY_CLOUDFLARED_TOKEN="$COPYPARTY_CLOUDFLARED_TOKEN" \ 
+  -e COPYPARTY_CLOUDFLARED_TOKEN="$COPYPARTY_CLOUDFLARED_TOKEN" \
   --restart unless-stopped \
-  greglinscheid/copyparty-tunnel:latest
+  ghcr.io/vilos92/copyparty-tunnel:latest
 ```
